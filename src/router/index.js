@@ -20,6 +20,10 @@ const router = createRouter({
       path: '/register',
       name: 'register',
       component: Register
+    },
+    {
+      path: '/addnote',
+      name:
     }
   ]
 })

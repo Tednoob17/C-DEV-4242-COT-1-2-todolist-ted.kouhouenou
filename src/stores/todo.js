@@ -8,8 +8,5 @@ export const useTodo = defineStore('add', () => {
   function addTodo(tod) {
     todo.value += JSON.stringify(tod)
   }
-  const json = JSON.parse(todo.value)
-  console.log(json)
-
   return { todo_done, todo, addTodo }
 })

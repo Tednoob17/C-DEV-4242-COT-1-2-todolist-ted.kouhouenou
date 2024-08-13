@@ -1,13 +1,15 @@
 import { defineStore } from 'pinia'
-import { ref } from 'pinia'
+import { ref } from 'vue'
 
-export const addtodo = defineStore('add', () => {
+export const useTodo = defineStore('add', () => {
   const todo_done = ref(false)
-  const todo = ref([])
+  const todo = ref('')
 
-  function addTodo(todo) {
-    todo.value.push(todo)
+  function addTodo(tod) {
+    todo.value += JSON.stringify(tod)
   }
+  const json = JSON.parse(todo.value)
+  console.log(json)
 
   return { todo_done, todo, addTodo }
 })

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Login from '../views/LoginPage.vue'
 import Register from '../views/RegistrationPage.vue'
 import HomePage from '../views/HomePage.vue'
+import Addnote from '../views/AddNotes.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,7 +24,8 @@ const router = createRouter({
     },
     {
       path: '/addnote',
-      name:
+      name: 'addnote',
+      component: Addnote
     }
   ]
 })
